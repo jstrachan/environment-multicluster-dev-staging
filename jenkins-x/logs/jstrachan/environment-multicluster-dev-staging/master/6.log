@@ -1,0 +1,26 @@
+
+Showing logs for build [32mjstrachan-environment-multiclus-chw7c-6[0m stage [32mrelease[0m and container [32mstep-credential-initializer-m7995[0m
+{"level":"warn","ts":1583253959.8606787,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583253959.8659892,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-multiclus-chw7c-6[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-pxtdk[0m
+{"level":"warn","ts":1583253960.8815458,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583253960.886256,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-environment-multiclus-chw7c-6[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-multiclus-chw7c-6[0m stage [32mrelease[0m and container [32mstep-git-source-jstrachan-environment-multiclus-chw7c-225jp[0m
+{"level":"warn","ts":1583253967.9945042,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583253969.0847147,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-multicluster-dev-staging.git @ v0.0.6 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-multiclus-chw7c-6[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:869625d0f22d019a8ffd05d353530bd3652b7f0e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-environment-multiclus-chw7c-6[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
+
+Showing logs for build [32mjstrachan-environment-multiclus-chw7c-6[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+error: please specify 'project' in **-requirements when running  in  batch mode
+[31m
+Pipeline failed on stage 'release' : container 'step-verify-preinstall'. The execution of the pipeline has stopped.[0m
