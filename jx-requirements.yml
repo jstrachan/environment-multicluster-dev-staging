@@ -3,7 +3,6 @@ autoUpdate:
   schedule: ""
 bootConfigURL: https://github.com/jstrachan/environment-multicluster-dev-staging.git
 cluster:
-  clusterName: multicluster-staging
   devEnvApprovers:
   - jstrachan
   environmentGitOwner: jstrachan
@@ -12,10 +11,8 @@ cluster:
   gitName: github
   gitServer: https://github.com
   namespace: jx-staging
-  project: jstrachan-multicluster
   provider: gke
   registry: gcr.io
-  zone: europe-west1-c
 environments:
 - gitKind: github
   gitServer: https://github.com
