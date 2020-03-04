@@ -1,0 +1,58 @@
+
+Showing logs for build [32mjstrachan-environment-multiclus-xcf9x-19[0m stage [32mrelease[0m and container [32mstep-credential-initializer-wxk67[0m
+{"level":"warn","ts":1583337628.6648579,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583337628.6652615,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-multiclus-xcf9x-19[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-5jm8k[0m
+{"level":"warn","ts":1583337629.157062,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583337629.1606576,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-environment-multiclus-xcf9x-19[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-multiclus-xcf9x-19[0m stage [32mrelease[0m and container [32mstep-git-source-jstrachan-environment-multiclus-xcf9x-rdqnv[0m
+{"level":"warn","ts":1583337637.2390969,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583337638.4279916,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-multicluster-dev-staging.git @ v0.0.19 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-multiclus-xcf9x-19[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:464c3b8955b4ff211d179d7e8c8be14896e2afc6
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-environment-multiclus-xcf9x-19[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
+
+Showing logs for build [32mjstrachan-environment-multiclus-xcf9x-19[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+no need to reconnect to cluster
+writing the following to the OWNERS file for the development environment repository:
+approvers:
+- *********
+reviewers:
+- *********
+WARNING: TLS is not enabled so your webhooks will be called using HTTP. This means your webhook secret will be sent to your cluster in the clear. See https://jenkins-x.io/docs/getting-started/setup/boot/#ingress for more information
+Verifying the kubernetes cluster before we try to boot Jenkins X in namespace: **-staging
+Trying to lazily create any missing resources to get the current cluster ready to boot Jenkins X
+Verifying Ingress...
+Clearing the domain 35.241.156.203.nip.io as when using auto-DNS domains we need to regenerate to ensure its always accurate in case the cluster or ingress service is recreated
+
+WARNING: there is no context defined in your Kubernetes configuration - we may be inside a test case or pod?
+No kube context - probably in a unit test or pod?
+
+Verifying Storage...
+WARNING: Your requirements have not enabled cloud storage for logs - we recommend enabling this for kubernetes provider gke
+WARNING: Your requirements have not enabled cloud storage for reports - we recommend enabling this for kubernetes provider gke
+WARNING: Your requirements have not enabled cloud storage for repository - we recommend enabling this for kubernetes provider gke
+WARNING: Your requirements have not enabled cloud storage for backup - we recommend enabling this for kubernetes provider gke
+Storage configuration looks good
+
+Validating Kaniko secret in namespace **-staging
+attempting to lazily create the deploy namespace **-staging
+Configuring Kaniko service account multicluster-staging-ko for project *********-multicluster
+Unable to find service account multicluster-staging-ko, checking if we have enough permission to create
+error: failed to lazily create the kaniko secret in: **-staging: creating the service account: failed to run 'gcloud iam list-testable-permissions //cloudresourcemanager.googleapis.com/projects/*********-multicluster --filter resourcemanager.projects.setIamPolicy' command in directory '', output: 'ERROR: gcloud crashed (MetadataServerException): HTTP Error 400: Bad Request
+
+If you would like to report this issue, please run the following command:
+  gcloud feedback
+
+To check gcloud for common problems, please run the following command:
+  gcloud info --run-diagnostics'
+[31m
+Pipeline failed on stage 'release' : container 'step-verify-preinstall'. The execution of the pipeline has stopped.[0m
