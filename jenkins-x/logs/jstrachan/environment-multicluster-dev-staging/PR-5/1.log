@@ -1,0 +1,41 @@
+
+Showing logs for build [32mjstrachan-environment-multiclus-vkdbv-1[0m stage [32mpr-checks[0m and container [32mstep-credential-initializer-c9hph[0m
+{"level":"warn","ts":1583322735.2618403,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-jx-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583322735.2627835,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-multiclus-vkdbv-1[0m stage [32mpr-checks[0m and container [32mstep-working-dir-initializer-q64b6[0m
+{"level":"warn","ts":1583322735.6474452,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583322735.6491172,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-environment-multiclus-vkdbv-1[0m stage [32mpr-checks[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-multiclus-vkdbv-1[0m stage [32mpr-checks[0m and container [32mstep-git-source-jstrachan-environment-multiclus-vkdbv-5fzhf[0m
+{"level":"warn","ts":1583322741.8415544,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-jx-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583322743.0272799,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-multicluster-dev-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-multiclus-vkdbv-1[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23,5:109de69b6d501dc9f15aa0a4df8bb2d86035f62b
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 109de69b6d501dc9f15aa0a4df8bb2d86035f62b: d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23:
+DEBUG: ran git fetch --unshallow origin 109de69b6d501dc9f15aa0a4df8bb2d86035f62b: d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23
+DEBUG: ran git reset --hard d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 109de69b6d501dc9f15aa0a4df8bb2d86035f62b
+DEBUG: ran git merge 109de69b6d501dc9f15aa0a4df8bb2d86035f62b in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23..HEAD
+Merged SHA 109de69b6d501dc9f15aa0a4df8bb2d86035f62b with commit message 'chore: Promote bdd-gh-1583312861 to version 0.0.5' into base branch master
+
+Showing logs for build [32mjstrachan-environment-multiclus-vkdbv-1[0m stage [32mpr-checks[0m and container [32mstep-init-secrets[0m
+error: failed to load Secrets YAML from secret manager Google Secret Manager for secret multicluster-staging-boot-secret: failed to ensure the google secret multicluster-staging-boot-secret exists: failed to run 'gcloud beta secrets create multicluster-staging-boot-secret --replication-policy automatic' command in directory '', output: 'ERROR: gcloud crashed (MetadataServerException): HTTP Error 400: Bad Request
+
+If you would like to report this issue, please run the following command:
+  gcloud feedback
+
+To check gcloud for common problems, please run the following command:
+  gcloud info --run-diagnostics'
+[31m
+Pipeline failed on stage 'pr-checks' : container 'step-init-secrets'. The execution of the pipeline has stopped.[0m
