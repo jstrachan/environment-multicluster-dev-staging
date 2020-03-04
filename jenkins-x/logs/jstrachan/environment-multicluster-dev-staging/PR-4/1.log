@@ -1,0 +1,58 @@
+
+Showing logs for build [32mjstrachan-environment-multiclus-gb2sq-1[0m stage [32mpr-checks[0m and container [32mstep-credential-initializer-vj4k2[0m
+{"level":"warn","ts":1583322344.4616706,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583322344.4621837,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-multiclus-gb2sq-1[0m stage [32mpr-checks[0m and container [32mstep-working-dir-initializer-wcvgm[0m
+{"level":"warn","ts":1583322345.8494737,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583322345.8513722,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-environment-multiclus-gb2sq-1[0m stage [32mpr-checks[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-multiclus-gb2sq-1[0m stage [32mpr-checks[0m and container [32mstep-git-source-jstrachan-environment-multiclus-gb2sq-ffjrg[0m
+{"level":"warn","ts":1583322355.9523914,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583322357.139637,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-multicluster-dev-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-multiclus-gb2sq-1[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23,4:3b586f91ed5f9e913242ca306e127c6ff606699d
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 3b586f91ed5f9e913242ca306e127c6ff606699d: d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23:
+DEBUG: ran git fetch --unshallow origin 3b586f91ed5f9e913242ca306e127c6ff606699d: d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23
+DEBUG: ran git reset --hard d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 3b586f91ed5f9e913242ca306e127c6ff606699d
+DEBUG: ran git merge 3b586f91ed5f9e913242ca306e127c6ff606699d in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e d3b3dbc6d70d548d5b8a6bee29340c6d29b57c23..HEAD
+Merged SHA 3b586f91ed5f9e913242ca306e127c6ff606699d with commit message 'chore: Promote bdd-gh-1583312861 to version 0.0.4' into base branch master
+
+Showing logs for build [32mjstrachan-environment-multiclus-gb2sq-1[0m stage [32mpr-checks[0m and container [32mstep-init-secrets[0m
+These are experimental commands that are likely to change and could be removed
+
+Commands can mature to alpha and beta phases before being accepted into the core ** command
+Complete documentation is available at https://jenkins-x.io
+
+Usage:
+  **l [command]
+
+Available Commands:
+  boot        boots up Jenkins and/or Jenkins X in a Kubernetes cluster using GitOps
+  help        Help about any command
+  jenkins     a tool to trigger pipelines in a Jenkins server
+  project     Create a new project by importing code, creating a quickstart or custom wizard for spring
+  step        Pipeline Steps: these commands are for use inside pipelines and generally not used by developers directly
+
+Flags:
+  -h, --help   help for **l
+
+Use "**l [command] --help" for more information about a command.
+
+Showing logs for build [32mjstrachan-environment-multiclus-gb2sq-1[0m stage [32mpr-checks[0m and container [32mstep-create-helmfile[0m
+
+Showing logs for build [32mjstrachan-environment-multiclus-gb2sq-1[0m stage [32mpr-checks[0m and container [32mstep-lint-helmfile-system[0m
+in ./helmfile.yaml: failed to read ../environments.yaml: environment values file matching "/tmp/**-secrets.yaml" does not exist in "."
+[31m
+Pipeline failed on stage 'pr-checks' : container 'step-lint-helmfile-system'. The execution of the pipeline has stopped.[0m
