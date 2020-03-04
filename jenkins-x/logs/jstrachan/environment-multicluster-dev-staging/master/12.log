@@ -1,0 +1,58 @@
+
+Showing logs for build [32mjstrachan-environment-multiclus-mqcsq-12[0m stage [32mrelease[0m and container [32mstep-credential-initializer-njvfs[0m
+{"level":"warn","ts":1583312754.3907142,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583312754.3913863,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-multiclus-mqcsq-12[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-2w5js[0m
+{"level":"warn","ts":1583312755.3530254,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583312755.3544335,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-environment-multiclus-mqcsq-12[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-multiclus-mqcsq-12[0m stage [32mrelease[0m and container [32mstep-git-source-jstrachan-environment-multiclus-mqcsq-zzspw[0m
+{"level":"warn","ts":1583312763.453638,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583312764.6063752,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-multicluster-dev-staging.git @ v0.0.12 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-multiclus-mqcsq-12[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:dedf615fd8b15e0c4b28fdea2ddc2d3ac75cc4eb
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-environment-multiclus-mqcsq-12[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
+
+Showing logs for build [32mjstrachan-environment-multiclus-mqcsq-12[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+no need to reconnect to cluster
+writing the following to the OWNERS file for the development environment repository:
+approvers:
+- *********
+reviewers:
+- *********
+WARNING: TLS is not enabled so your webhooks will be called using HTTP. This means your webhook secret will be sent to your cluster in the clear. See https://jenkins-x.io/docs/getting-started/setup/boot/#ingress for more information
+Verifying the kubernetes cluster before we try to boot Jenkins X in namespace: **
+Trying to lazily create any missing resources to get the current cluster ready to boot Jenkins X
+Verifying Ingress...
+
+Using namespace '**' from context named '' on server ''.
+
+Verifying Storage...
+WARNING: Your requirements have not enabled cloud storage for logs - we recommend enabling this for kubernetes provider gke
+WARNING: Your requirements have not enabled cloud storage for reports - we recommend enabling this for kubernetes provider gke
+WARNING: Your requirements have not enabled cloud storage for repository - we recommend enabling this for kubernetes provider gke
+WARNING: Your requirements have not enabled cloud storage for backup - we recommend enabling this for kubernetes provider gke
+Storage configuration looks good
+
+Validating Kaniko secret in namespace **
+
+verified there is a ConfigMap config in namespace **
+verified there is a ConfigMap plugins in namespace **
+Cluster looks good, you are ready to '** boot' now!
+
+
+Showing logs for build [32mjstrachan-environment-multiclus-mqcsq-12[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
+Jenkins X CRDs upgraded with success
+
+Showing logs for build [32mjstrachan-environment-multiclus-mqcsq-12[0m stage [32mrelease[0m and container [32mstep-generate-helmfile[0m
+error: failed to load applications: Validation failures in YAML file **-apps.yml:
+(root): Additional property apps is not allowed
+[31m
+Pipeline failed on stage 'release' : container 'step-generate-helmfile'. The execution of the pipeline has stopped.[0m
