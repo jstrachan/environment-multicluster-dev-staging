@@ -1,58 +1,37 @@
 
-Showing logs for build [32mjstrachan-environment-multiclus-xznb4-1[0m stage [32mrelease[0m and container [32mstep-credential-initializer-7f49l[0m
-{"level":"warn","ts":1583253479.5976305,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1583253479.59807,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mmeta-jstrachan-environment-mult-knf2m-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-m4hpc[0m
+{"level":"warn","ts":1583336748.0396855,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-jx-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583336748.0402896,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mjstrachan-environment-multiclus-xznb4-1[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-7swtr[0m
-{"level":"warn","ts":1583253480.6744986,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1583253480.6758237,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mmeta-jstrachan-environment-mult-knf2m-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-hpkwq[0m
+{"level":"warn","ts":1583336749.0871828,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583336749.0888228,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mjstrachan-environment-multiclus-xznb4-1[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mmeta-jstrachan-environment-mult-knf2m-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mjstrachan-environment-multiclus-xznb4-1[0m stage [32mrelease[0m and container [32mstep-git-source-jstrachan-environment-multiclus-xznb4-gv5tj[0m
-{"level":"warn","ts":1583253487.761085,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1583253488.7751505,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-multicluster-dev-staging.git @ v0.0.1 in path /workspace/source"}
+Showing logs for build [32mmeta-jstrachan-environment-mult-knf2m-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-jstrachan-environment-mult-knf2m-6kf62[0m
+{"level":"warn","ts":1583336754.1731825,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-jx-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583336755.329078,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-multicluster-dev-staging.git @ 8b6dfcb8b8ad81563d532fea8281cd98c40d24cf in path /workspace/source"}
 
-Showing logs for build [32mjstrachan-environment-multiclus-xznb4-1[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:f5791b6eecb28c90dd4b378686b5119e60c67b5b
+Showing logs for build [32mmeta-jstrachan-environment-mult-knf2m-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:8b6dfcb8b8ad81563d532fea8281cd98c40d24cf
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mjstrachan-environment-multiclus-xznb4-1[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
-Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
+Showing logs for build [32mmeta-jstrachan-environment-mult-knf2m-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
 
-Showing logs for build [32mjstrachan-environment-multiclus-xznb4-1[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
-no need to reconnect to cluster
-writing the following to the OWNERS file for the development environment repository:
-approvers:
-- *********
-reviewers:
-- *********
-WARNING: TLS is not enabled so your webhooks will be called using HTTP. This means your webhook secret will be sent to your cluster in the clear. See https://jenkins-x.io/docs/getting-started/setup/boot/#ingress for more information
-Verifying the kubernetes cluster before we try to boot Jenkins X in namespace: **
-Trying to lazily create any missing resources to get the current cluster ready to boot Jenkins X
-Verifying Ingress...
+Showing logs for build [32mmeta-jstrachan-environment-mult-knf2m-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Effective pipeline written to jenkins-x-effective.yml
 
-Using namespace '**' from context named '' on server ''.
-
-Verifying Storage...
-WARNING: Your requirements have not enabled cloud storage for logs - we recommend enabling this for kubernetes provider gke
-WARNING: Your requirements have not enabled cloud storage for reports - we recommend enabling this for kubernetes provider gke
-WARNING: Your requirements have not enabled cloud storage for repository - we recommend enabling this for kubernetes provider gke
-WARNING: Your requirements have not enabled cloud storage for backup - we recommend enabling this for kubernetes provider gke
-Storage configuration looks good
-
-Validating Kaniko secret in namespace **
-
-verified there is a ConfigMap config in namespace **
-verified there is a ConfigMap plugins in namespace **
-Cluster looks good, you are ready to '** boot' now!
-
-
-Showing logs for build [32mjstrachan-environment-multiclus-xznb4-1[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
-Jenkins X CRDs upgraded with success
-
-Showing logs for build [32mjstrachan-environment-multiclus-xznb4-1[0m stage [32mrelease[0m and container [32mstep-generate-helmfile[0m
-error: failed to load applications: Validation failures in YAML file **-apps.yml:
-(root): Additional property apps is not allowed
+Showing logs for build [32mmeta-jstrachan-environment-mult-knf2m-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: jx step next-version --use-git-tag-only --tag
+created new version: 0.0.17 and written to file: ./VERSION
+error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
+: git output: To https://github.com/*********/environment-multicluster-dev-staging.git
+ ! [remote rejected] v0.0.17 -> v0.0.17 (cannot lock ref 'refs/tags/v0.0.17': reference already exists)
+error: failed to push some refs to 'https://github.com/*********/environment-multicluster-dev-staging.git': failed to run 'git push origin v0.0.17' command in directory '', output: 'To https://github.com/*********/environment-multicluster-dev-staging.git
+ ! [remote rejected] v0.0.17 -> v0.0.17 (cannot lock ref 'refs/tags/v0.0.17': reference already exists)
+error: failed to push some refs to 'https://github.com/*********/environment-multicluster-dev-staging.git''
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c jx step next-version --use-git-tag-only --tag' command in directory '/workspace/source', output: ''
 [31m
-Pipeline failed on stage 'release' : container 'step-generate-helmfile'. The execution of the pipeline has stopped.[0m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
