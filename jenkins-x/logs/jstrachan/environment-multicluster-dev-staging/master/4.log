@@ -1,26 +1,26 @@
 
-Showing logs for build [32mjstrachan-environment-multiclus-7sk6b-4[0m stage [32mrelease[0m and container [32mstep-credential-initializer-nwqxq[0m
-{"level":"warn","ts":1583253921.7485914,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1583253921.7492115,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-credential-initializer-l7xx6[0m
+{"level":"warn","ts":1583338016.9930606,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-jx-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583338016.99381,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mjstrachan-environment-multiclus-7sk6b-4[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-dfnqp[0m
-{"level":"warn","ts":1583253922.7921436,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1583253922.7936068,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-6bfvg[0m
+{"level":"warn","ts":1583338018.0024583,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583338018.0040944,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mjstrachan-environment-multiclus-7sk6b-4[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mjstrachan-environment-multiclus-7sk6b-4[0m stage [32mrelease[0m and container [32mstep-git-source-jstrachan-environment-multiclus-7sk6b-7lbc8[0m
-{"level":"warn","ts":1583253929.9371371,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1583253930.9991016,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-multicluster-dev-staging.git @ v0.0.4 in path /workspace/source"}
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-git-source-jstrachan-environment-multiclus-vfpxs-sx5jx[0m
+{"level":"warn","ts":1583338026.1667697,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-jx-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583338027.3424673,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-multicluster-dev-staging.git @ v0.0.20 in path /workspace/source"}
 
-Showing logs for build [32mjstrachan-environment-multiclus-7sk6b-4[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:565a12c024976f60b23e35f9fe335dd9745b4c68
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:869c81ee9b712c98941956861144c4346c7fc91c
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mjstrachan-environment-multiclus-7sk6b-4[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
 Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
 
-Showing logs for build [32mjstrachan-environment-multiclus-7sk6b-4[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
 no need to reconnect to cluster
 writing the following to the OWNERS file for the development environment repository:
 approvers:
@@ -28,11 +28,12 @@ approvers:
 reviewers:
 - *********
 WARNING: TLS is not enabled so your webhooks will be called using HTTP. This means your webhook secret will be sent to your cluster in the clear. See https://jenkins-x.io/docs/getting-started/setup/boot/#ingress for more information
-Verifying the kubernetes cluster before we try to boot Jenkins X in namespace: **
+Verifying the kubernetes cluster before we try to boot Jenkins X in namespace: **********
 Trying to lazily create any missing resources to get the current cluster ready to boot Jenkins X
 Verifying Ingress...
+Clearing the domain 35.241.156.203.nip.io as when using auto-DNS domains we need to regenerate to ensure its always accurate in case the cluster or ingress service is recreated
 
-Using namespace '**' from context named '' on server ''.
+Using namespace '**********' from context named '' on server ''.
 
 Verifying Storage...
 WARNING: Your requirements have not enabled cloud storage for logs - we recommend enabling this for kubernetes provider gke
@@ -41,18 +42,228 @@ WARNING: Your requirements have not enabled cloud storage for repository - we re
 WARNING: Your requirements have not enabled cloud storage for backup - we recommend enabling this for kubernetes provider gke
 Storage configuration looks good
 
-Validating Kaniko secret in namespace **
+Validating Kaniko secret in namespace **********
 
-verified there is a ConfigMap config in namespace **
-verified there is a ConfigMap plugins in namespace **
-Cluster looks good, you are ready to '** boot' now!
+verified there is a ConfigMap config in namespace **********
+verified there is a ConfigMap plugins in namespace **********
+Cluster looks good, you are ready to 'jx boot' now!
 
 
-Showing logs for build [32mjstrachan-environment-multiclus-7sk6b-4[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
 Jenkins X CRDs upgraded with success
 
-Showing logs for build [32mjstrachan-environment-multiclus-7sk6b-4[0m stage [32mrelease[0m and container [32mstep-generate-helmfile[0m
-error: failed to load applications: Validation failures in YAML file **-apps.yml:
-(root): Additional property apps is not allowed
-[31m
-Pipeline failed on stage 'release' : container 'step-generate-helmfile'. The execution of the pipeline has stopped.[0m
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-generate-helmfile[0m
+
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-helmfile-system[0m
+Adding repo dev http://chartmuseum-jx.35.195.0.188.nip.io
+"dev" has been added to your repositories
+
+Adding repo stable https://kubernetes-charts.storage.googleapis.com
+"stable" has been added to your repositories
+
+Updating repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "dev" chart repository
+...Successfully got an update from the "stable" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+Affected releases are:
+  nginx-ingress (stable/nginx-ingress) UPDATED
+
+Upgrading release=nginx-ingress, chart=stable/nginx-ingress
+Release "nginx-ingress" has been upgraded. Happy Helming!
+NAME: nginx-ingress
+LAST DEPLOYED: Wed Mar  4 16:07:34 2020
+NAMESPACE: nginx
+STATUS: deployed
+REVISION: 3
+TEST SUITE: None
+NOTES:
+The nginx-ingress controller has been installed.
+It may take a few minutes for the LoadBalancer IP to be available.
+You can watch the status by running 'kubectl --namespace nginx get services -o wide -w nginx-ingress-controller'
+
+An example Ingress that makes use of the controller:
+
+  apiVersion: extensions/v1beta1
+  kind: Ingress
+  metadata:
+    annotations:
+      kubernetes.io/ingress.class: nginx
+    name: example
+    namespace: foo
+  spec:
+    rules:
+      - host: www.example.com
+        http:
+          paths:
+            - backend:
+                serviceName: exampleService
+                servicePort: 80
+              path: /
+    # This section is only required if TLS is to be enabled for the Ingress
+    tls:
+        - hosts:
+            - www.example.com
+          secretName: example-tls
+
+If TLS is enabled for the Ingress, a Secret containing the certificate and key must also be provided:
+
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: example-tls
+    namespace: foo
+  data:
+    tls.crt: <base64 encoded cert>
+    tls.key: <base64 encoded key>
+  type: kubernetes.io/tls
+
+Listing releases matching ^nginx-ingress$
+nginx-ingress	nginx    	3       	2020-03-04 16:07:34.625943295 +0000 UTC	deployed	nginx-ingress-1.33.1	0.30.0     
+
+
+UPDATED RELEASES:
+NAME            CHART                  VERSION
+nginx-ingress   stable/nginx-ingress    1.33.1
+
+
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-verify-ingress[0m
+Waiting to find the external host name of the ingress controller Service in namespace nginx with name nginx-ingress-controller
+No domain flag provided so using default 35.241.156.203.nip.io to generate Ingress rules
+defaulting the domain to 35.241.156.203.nip.io and modified /workspace/source/jx-requirements.yml
+
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-helmfile-apps[0m
+Adding repo dev http://chartmuseum-jx.35.195.0.188.nip.io
+"dev" has been added to your repositories
+
+Adding repo jenkins-x https://storage.googleapis.com/chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+
+Adding repo jenkins-x http://chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+
+Updating repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "dev" chart repository
+...Successfully got an update from the "jenkins-x" chart repository
+...Successfully got an update from the "stable" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+Affected releases are:
+  bdd-gh-1583312861 (dev/bdd-gh-1583312861) UPDATED
+  jxboot-helmfile-resources (jenkins-x/jxboot-helmfile-resources) UPDATED
+  lighthouse (jenkins-x/lighthouse) UPDATED
+  tekton (jenkins-x/tekton) UPDATED
+
+Upgrading release=tekton, chart=jenkins-x/tekton
+Upgrading release=bdd-gh-1583312861, chart=dev/bdd-gh-1583312861
+Upgrading release=lighthouse, chart=jenkins-x/lighthouse
+Upgrading release=jxboot-helmfile-resources, chart=jenkins-x/jxboot-helmfile-resources
+Release "lighthouse" has been upgraded. Happy Helming!
+NAME: lighthouse
+LAST DEPLOYED: Wed Mar  4 16:07:48 2020
+NAMESPACE: **********
+STATUS: deployed
+REVISION: 3
+TEST SUITE: None
+NOTES:
+Get the application URL by running these commands:
+
+Listing releases matching ^lighthouse$
+kubectl get ingress lighthouse-lighthouse
+
+lighthouse	**********	3       	2020-03-04 16:07:48.928808673 +0000 UTC	deployed	lighthouse-0.0.467	0.0.467    
+
+Release "tekton" has been upgraded. Happy Helming!
+NAME: tekton
+LAST DEPLOYED: Wed Mar  4 16:07:49 2020
+NAMESPACE: **********
+STATUS: deployed
+REVISION: 3
+TEST SUITE: None
+NOTES:
+Tekton Pipelines
+
+Listing releases matching ^tekton$
+tekton	**********	3       	2020-03-04 16:07:49.210117946 +0000 UTC	deployed	tekton-0.0.48	           
+
+Release "jxboot-helmfile-resources" has been upgraded. Happy Helming!
+NAME: jxboot-helmfile-resources
+LAST DEPLOYED: Wed Mar  4 16:07:49 2020
+NAMESPACE: **********
+STATUS: deployed
+REVISION: 3
+TEST SUITE: None
+
+Listing releases matching ^jxboot-helmfile-resources$
+jxboot-helmfile-resources	**********	3       	2020-03-04 16:07:49.248062284 +0000 UTC	deployed	jxboot-helmfile-resources-0.0.79	           
+
+Listing releases matching ^bdd-gh-1583312861$
+Release "bdd-gh-1583312861" does not exist. Installing it now.
+NAME: bdd-gh-1583312861
+LAST DEPLOYED: Wed Mar  4 16:07:45 2020
+NAMESPACE: **********
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+Get the application URL by running these commands:
+
+kubectl get ingress bdd-gh-1583312861-bdd-gh-1583312861
+
+bdd-gh-1583312861	**********	1       	2020-03-04 16:07:45.555540595 +0000 UTC	deployed	bdd-gh-1583312861-0.0.6	0.0.6      
+
+
+UPDATED RELEASES:
+NAME                        CHART                                 VERSION
+lighthouse                  jenkins-x/lighthouse                  0.0.467
+tekton                      jenkins-x/tekton                       0.0.48
+jxboot-helmfile-resources   jenkins-x/jxboot-helmfile-resources    0.0.79
+bdd-gh-1583312861           dev/bdd-gh-1583312861                   0.0.6
+
+
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-git-creds[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-verify-jenkins-x-environment[0m
+Storing the requirements in team settings in the dev environment
+Validating git repository for dev environment at URL https://github.com/*********/environment-multicluster-dev-staging.git
+Environment git repositories look good
+
+
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-install-pipelines[0m
+
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-update-webhooks[0m
+DEBUG: Finding service url for hook in namespace **********
+DEBUG: Couldn't find service url, attempting to look up via ingress
+DEBUG: found service url http://hook-**********.35.241.156.203.nip.io
+Updating webhooks for Owner: ********* and Repository: environment-multicluster-dev-staging in git server: https://github.com
+Checking hooks for repository *********/environment-multicluster-dev-staging with user *********
+Found matching hook for url http://hook-**********.35.241.156.203.nip.io/hook
+Updating GitHub webhook for *********/environment-multicluster-dev-staging for url http://hook-**********.35.241.156.203.nip.io/hook
+
+Showing logs for build [32mjstrachan-environment-multiclus-vfpxs-4[0m stage [32mrelease[0m and container [32mstep-verify-installation[0m
+verifying the Jenkins X installation in namespace **********
+verifying pods
+Checking pod statuses
+POD                                                        STATUS
+bdd-gh-1583312861-bdd-gh-1583312861-7fb69d896-4mpvg        Running
+jx-boot-xn944                                              Succeeded
+jxboot-helmfile-resources-controllerbuild-86894f9cc9-8vbn4 Running
+jxboot-helmfile-resources-controllerrole-747d7d544d-vrvgc  Running
+jxboot-helmfile-resources-gcactivities-1583334000-7qvrw    Succeeded
+jxboot-helmfile-resources-gcactivities-1583335800-rqd97    Succeeded
+jxboot-helmfile-resources-gcpods-1583334000-kktx7          Succeeded
+jxboot-helmfile-resources-gcpods-1583335800-r8d8p          Succeeded
+jxboot-helmfile-resources-gcpreviews-1583334000-dt5jn      Succeeded
+lighthouse-lighthouse-65f6cdcc46-t4rzz                     Running
+lighthouse-lighthouse-65f6cdcc46-t7xjh                     Running
+tekton-pipelines-controller-666488cbd5-qj6ms               Running
+tide-66bf869b75-j2wvl                                      Running
+Verifying the git config
+Verifying username ********* at git server github at https://github.com
+Found 21 organisations in git server https://github.com: CamelCookbook, FuseByExample, arcalos-dashboard, arcalos-environments, cb-kubecd, cloudbees, codeship, fabric8-updatebot, fusesource, jenkins-x, jenkins-x-apps, jenkins-x-buildpacks, jenkins-x-charts, jenkins-x-dashboard, jenkins-x-images, jenkins-x-labs, jenkins-x-quickstarts, jenkins-x-test-projects, jenkinsci, jenkinsx, petclinic-gcp
+Validated pipeline user ********* on git server https://github.com
+Git tokens seem to be setup correctly
+Installation is currently looking: GOOD
