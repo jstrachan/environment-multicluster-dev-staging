@@ -4,3 +4,8 @@ apps:
   version: 0.0.79
 - name: jenkins-x/lighthouse
 - name: jenkins-x/tekton
+- name: dev/bdd-gh-1583312861
+  version: 0.0.6
+repositories:
+- name: dev
+  url: http://chartmuseum-jx.35.195.0.188.nip.io
